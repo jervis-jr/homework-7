@@ -1,0 +1,48 @@
+.animation-container{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.photo{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 400px;
+    height: auto;
+}
+
+.photo1{
+    left: -200px;
+    animation: moveright 5s infinite alternate;
+}
+
+.photo2{
+    animation: moveleft 5s infinite alternate;
+}
+
+@keyframes moveright{
+    0%{
+        left: -200px;
+    }
+    50%{
+        left: 50%;
+        transform: translate(-50% -50%);
+    }
+    100%{
+        left: -200px;
+    }
+}
+
+@keyframes moveleft{
+    0%{
+        right: -200px;
+    }
+    50%{
+        right: 50%;
+        transform: translate(50% -50%);
+    }
+    100%{
+        right: 100%;
+    }
+}
